@@ -375,15 +375,7 @@ button {
   -webkit-box-ordinal-group: 3;
   -webkit-order: 2;
       -ms-flex-order: 2;
-          order: 2;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-      -ms-flex-pack: end;
-          justify-content: flex-end; }
+          order: 2; }
 
 .groom__photo, .bride__photo {
   width: 28.8%;
@@ -393,7 +385,6 @@ button {
     display: block;
     position: absolute;
     top: 0;
-    left: 0;
     max-width: 100%;
     height: auto;
     z-index: 2; }
@@ -451,6 +442,8 @@ button {
     padding-right: 0; }
   .groom__photo, .bride__photo {
     width: 39.8%; }
+  .bride__photo img {
+    right: 0; }
   .photo__border--left, .photo__border--right {
     display: none; } }
 
@@ -461,8 +454,29 @@ button {
     padding-right: 10px; }
   .groom__photo, .bride__photo {
     width: 49.8%; }
-  .happy__groom .section-content {
+  .happy__groom .section-content, .happy__bride .section-content {
     width: 50%; } }
+
+@media only screen and (max-width: 1000px) {
+  .groom__photo {
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2; }
+    .groom__photo img {
+      right: 0; }
+  .happy__groom .section-content {
+    padding-left: 100px;
+    padding-right: 10px; }
+  .happy__groom, .happy__bride {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .groom__photo, .bride__photo {
+    width: 42.8%; }
+  .happy__groom .section-content, .happy__bride .section-content {
+    width: 57%; } }
 
 .story {
   position: relative;

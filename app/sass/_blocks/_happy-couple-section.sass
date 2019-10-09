@@ -15,8 +15,6 @@
 
 .bride__photo
     order: 2
-    display: flex
-    justify-content: flex-end
 
 .groom__photo, .bride__photo
     width: 28.8%
@@ -26,7 +24,6 @@
         display: block
         position: absolute
         top: 0
-        left: 0
         max-width: 100%
         height: auto
         z-index: 2
@@ -88,6 +85,10 @@
     
     .groom__photo, .bride__photo
         width: 39.8%
+    
+    .bride__photo
+        img
+            right: 0
 
     .photo__border--left, .photo__border--right
         display: none
@@ -104,8 +105,29 @@
     .groom__photo, .bride__photo
         width: 49.8%
     
-    .happy__groom
+    .happy__groom, .happy__bride
         .section-content
             width: 50%
+
+@media only screen and (max-width: 1000px)
+    .groom__photo
+        order: 2
+        img
+            right: 0
+    
+    .happy__groom .section-content
+        padding-left: 100px
+        padding-right: 10px
+    
+    .happy__groom, .happy__bride
+        justify-content: space-between
+
+    .groom__photo, .bride__photo
+        width: 42.8%
+    
+    .happy__groom, .happy__bride
+        .section-content
+            width: 57%
+
 
 
