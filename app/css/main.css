@@ -274,6 +274,7 @@ button {
   background-repeat: no-repeat; }
 
 .banner__title {
+  display: block;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -290,7 +291,8 @@ button {
   color: #fff;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%); }
+          transform: translate(-50%, -50%);
+  border: 8px solid #fff; }
   .banner__title span {
     margin-top: 25px;
     display: block;
@@ -298,20 +300,37 @@ button {
   .banner__title time {
     display: block; }
 
-.banner__title:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 8px solid #fff; }
-
 .banner__title span, .banner__title time {
   font-family: "PlayfairDisplay-Regular", sans-serif;
   font-size: 22px;
   line-height: 32px;
   text-transform: capitalize; }
+
+@media only screen and (max-width: 1120px) {
+  .banner__title {
+    font-size: 4.75em;
+    padding: 80px 80px; } }
+
+@media only screen and (max-width: 880px) {
+  .banner__title {
+    font-size: 3.75em;
+    padding: 60px 60px; } }
+
+@media only screen and (max-width: 680px) {
+  .banner__title {
+    font-size: 2.75em;
+    padding: 30px 30px; } }
+
+@media only screen and (max-width: 500px) {
+  .banner__title {
+    font-size: 2.3em;
+    padding: 30px 30px; }
+    .banner__title span, .banner__title time {
+      font-size: 18px; } }
+
+@media only screen and (max-width: 400px) {
+  .banner__title {
+    border: none; } }
 
 .banner__countdown {
   position: absolute;
@@ -328,55 +347,122 @@ button {
 .happy {
   padding-top: 205px;
   padding-bottom: 140px; }
-  .happy__groom {
-    width: 100%;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    margin-bottom: 112px; }
-  .happy__bride {
-    width: 100%;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex; }
-  .happy .section-image {
-    width: 45%; }
-  .happy .section-content {
-    width: 55%; }
-  .happy .img-wrapper {
-    display: inline-block;
-    position: relative;
-    width: 352px;
-    height: 432px; }
-  .happy .image {
+
+.happy__groom, .happy__bride {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.happy__groom {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-bottom: 112px; }
+
+.happy__bride {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
+
+.bride__photo {
+  -webkit-box-ordinal-group: 3;
+  -webkit-order: 2;
+      -ms-flex-order: 2;
+          order: 2;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
+
+.groom__photo, .bride__photo {
+  width: 28.8%;
+  min-height: 400px;
+  position: relative; }
+  .groom__photo .photo, .bride__photo .photo {
+    display: block;
     position: absolute;
-    left: 0;
     top: 0;
+    left: 0;
+    max-width: 100%;
+    height: auto;
     z-index: 2; }
-  .happy .img-wrapper:after {
-    content: "";
-    position: absolute;
-    bottom: -64px;
-    width: 100%;
-    height: 100%;
-    border: 8px solid #4F3566;
-    z-index: 0; }
-  .happy .img-wrapper--border-left:after {
-    left: -64px; }
-  .happy .img-wrapper--border-right:after {
-    right: -64px; }
-  .happy .happy__bride .section-content {
-    -webkit-box-ordinal-group: 2;
-    -webkit-order: 1;
-        -ms-flex-order: 1;
-            order: 1; }
-  .happy .happy__bride .section-image {
-    -webkit-box-ordinal-group: 3;
-    -webkit-order: 2;
-        -ms-flex-order: 2;
-            order: 2; }
+
+.groom__photo .photo__border, .bride__photo .photo__border {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 8px solid #4F3566; }
+
+.photo__border--left {
+  top: 64px;
+  left: -64px; }
+
+.photo__border--right {
+  top: 64px;
+  right: -64px; }
+
+.section-content {
+  width: 70%; }
+  .section-content .content__descr {
+    max-width: 90%;
+    margin: 0;
+    margin-bottom: 20px; }
+
+.section-content--padding-left {
+  padding-left: 167px;
+  padding-right: 100px; }
+
+.section-content--padding-right {
+  padding-right: 167px;
+  padding-left: 100px; }
+
+.container {
+  border: 1px solid red; }
+
+@media screen and (max-width: 1350px) {
+  .photo__border--left {
+    top: 64px;
+    left: 64px; }
+  .photo__border--right {
+    top: 64px;
+    right: 64px; }
+  .groom__photo, .bride__photo {
+    min-height: 380px; } }
+
+@media only screen and (max-width: 1150px) {
+  .happy__groom, .happy__bride {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .happy__groom .section-content {
+    width: 60%;
+    padding-right: 0; }
+  .groom__photo, .bride__photo {
+    width: 39.8%; }
+  .photo__border--left, .photo__border--right {
+    display: none; } }
+
+@media only screen and (max-width: 1050px) {
+  .happy__groom .section-content {
+    padding-left: 10px; }
+  .happy__bride .section-content {
+    padding-right: 10px; }
+  .groom__photo, .bride__photo {
+    width: 49.8%; }
+  .happy__groom .section-content {
+    width: 50%; } }
 
 .story {
   position: relative;
