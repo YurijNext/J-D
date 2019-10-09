@@ -1,0 +1,143 @@
+@import "vars"
+@import "fonts"
+
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $playfairRegular
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+*
+	box-sizing: border-box
+	outline: none
+
+
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold 
+
+button 
+	cursor: pointer
+
+.clearfix:after
+    display: block
+    content: ""
+    clear: both
+
+.container
+	max-width: 1120px
+	padding: 0 20px
+	margin: 0 auto
+
+.section-title
+	font-family: $marcellus
+	font-size: 3.5em
+	font-weight: 200
+	line-height: 1.571em
+	margin: 0
+	margin-bottom: 35px
+	text-align: center
+	color: $accent
+
+.content__title 
+    position: relative
+    font-family: $playfairBold
+    font-size: 2em
+    line-height: 1.6em
+    text-transform: uppercase
+    color: $accent
+    padding-bottom: 15px   
+    small
+        display: block
+        font-family: $loraRegular
+        text-transform: lowercase
+        font-size: 0.75em
+        line-height: 1.2em
+        font-weight: 200
+    strong 
+        text-transform: capitalize
+        font-weight: 200
+
+.after-line:after
+	content: ""
+	position: absolute
+	left: -55px
+	bottom: 0
+	width: 112px
+	height: 1px 
+	background-color: $accent 
+    
+.content__descr
+	max-width: 70%
+	color: $text
+
+.slick-arrow
+    position: absolute
+    left: 0
+    bottom: -36px
+    background: none
+    border: none
+    &:before
+        content: ""
+        position: absolute
+        left: 0
+        top: 50%
+        transform: translateY(-50%)
+        width: 100px
+        height: 32px
+        background-position: center center
+        background-repeat: no-repeat
+        opacity: 1
+        transition: opacity .3s ease-out
+
+.slick-next
+    left: 140px
+
+.slick-prev:before
+    background-image: url(../img/slider/arrow-left.svg)
+
+.slick-next:before
+    background-image: url(../img/slider/arrow-right.svg)
+    
+.slick-prev:hover:before, .slick-next:hover:before
+    opacity: .7
+
+@import _blocks/_buttons
+@import _global/_header
+@import _blocks/_banner-section
+@import _blocks/_countdown
+@import _blocks/_happy-couple-section
+@import _blocks/_story-section
+@import _blocks/_photos-section
+@import _blocks/_venues-section
+@import _blocks/_feedback-section
+@import _blocks/_support-section
+@import _global/_footer

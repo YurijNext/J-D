@@ -1,0 +1,40 @@
+.main-header
+    position: absolute
+    width: 100%
+    padding-top: 20px
+    z-index: 2
+
+.container-flex
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+.navigation
+    &__list
+        margin: 0
+        padding: 0
+    &__item
+        display: inline-block
+        list-style-type: none
+    &__link 
+        font-family: $marcellus
+        font-size: 13px
+        line-height: 20px
+        text-transform: uppercase
+        padding: 0 24px
+        color: #fff
+        opacity: 0.5
+        transition: opacity .3s ease-out
+        text-decoration: none
+        &:hover
+            opacity: 1
+
+.header__button
+    font-family: $playfairRegular
+    font-size: 14px
+    line-height: 20px
+    text-transform: uppercase
+    color: #fff
+    background: none
+    border: none
+    border-bottom: 1px solid #fff

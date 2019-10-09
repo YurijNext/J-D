@@ -1,0 +1,35 @@
+.btn
+    display: block
+    color: #fff
+    position: relative 
+    background: none
+    border: none
+    padding: 12px 40px
+    padding-right: 64px
+    background-color: $accent
+    font-family: $marcellus
+    font-size: 14px
+    line-height: 20px
+    text-transform: uppercase
+    border: 2px solid transparent
+    transition: background-color border .3s ease-out
+    &::after
+        content: ""
+        position: absolute
+        top: 50%
+        right: 40px
+        width: 16px
+        height: 1px
+        background-color: #fff
+    
+    &:hover
+        background-color: #402657
+    
+    &:active
+        background-color: #402657
+
+    &:focus
+        background-color: #4F3566
+        border: 2px solid #F5A8A8
+    &:disabled
+        background-color: #CBBADB

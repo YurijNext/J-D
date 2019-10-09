@@ -1,0 +1,23 @@
+section.feedback
+    .container.clearfix
+
+        form.feedback__form(action="" method="POST")
+            h2.form__title Rvsp
+            p.form__descr Please reserve before May 16th, 2020
+
+            p.inputs-wrapper
+                input(type="text" class="form__name" name="name" placeholder="Your Name" autocomplete="off")
+                input(type="email" class="form__email" name="mail" placeholder="Your E-mail" autocomplete="off")
+            
+            p.inputs-wrapper
+                input(type="number" class="form__guests-number" name="guests-number" placeholder="Number of Guests" autocomplete="off")
+                select(class="form__attend")
+                    option(value="") I will Attend
+                    option(value="1") 1
+                    option(value="2") 2
+            
+            p.inputs-wrapper
+                textarea(class="form__message" placeholder="Your Comment")
+            
+            p.button-wrapper
+                button.btn(type="submit") I will attend

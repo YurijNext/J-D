@@ -1,0 +1,38 @@
+.support
+    padding-top: 112px
+    padding-bottom: 185px
+
+    .flex-container
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        padding-left: 81px
+        padding-right: 81px
+    
+.support__title
+    margin: 0
+    position: relative
+    font-family: $playfairBold
+    font-size: 3.25em
+    line-height: 1.6em
+    text-transform: uppercase
+    padding-bottom: 15px
+    max-width: 360px
+    &:after
+        content: ""
+        position: absolute
+        top: 100%
+        left: -81px
+        width: 192px
+        height: 1px
+        background-color: $text
+    
+.donate-wrapper
+    text-align: right
+    .donate-descr
+        display: block
+        margin-bottom: 28px
+    .btn 
+        display: inline-block
+
