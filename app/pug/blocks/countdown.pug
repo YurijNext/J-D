@@ -1,16 +1,19 @@
 .banner__countdown
     p.countdown__title Countdown to Wedding Ceremony
 
-    ul.countdown
-        li
-            span.days 00
-            p.days_ref days
-        li
-            span.hours 00
-            p.hours_ref hours
-        li
-            span.minutes 00
-            p.minutes_ref minutes
-        li
-            span.seconds 00
-            p.seconds_ref seconds
+    .countdown__block.countdown
+        .countdown__element.countdown__month
+            span.count.month 00
+            span.label.month_ref Month
+        .countdown__element.countdown__days
+            span.count.days 00
+            span.label.days_ref Days 
+        .countdown__element.countdown__hours
+            span.count.hours 00
+            span.label.hours_ref Hours 
+        .countdown__element.countdown__minutes
+            span.count.minutes 00
+            span.label Minutes
+        .countdown__element.countdown__seconds
+            span.count.seconds 00
+            span.label.seconds_ref Seconds

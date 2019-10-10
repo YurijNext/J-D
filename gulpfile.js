@@ -32,8 +32,7 @@ gulp.task('sass', function() {
 gulp.task('libs-css', function() {
     return gulp.src([
         'app/libs/normalize.css/normalize.css',
-        'app/libs/slick/slick/slick.css',
-        'app/libs/jquery_nice_select/css/nice-select.css'
+        'app/libs/slick/slick/slick.css'
     ])
     .pipe(cssnano())
     .pipe(concat('libs.css'))
@@ -50,8 +49,7 @@ gulp.task('libs-js', function() {
     return gulp.src([
         'app/libs/jquery/dist/jquery.min.js',
         'app/libs/slick/slick/slick.min.js',
-        'app/libs/jquery_nice_select/js/jquery.nice-select.min.js'
-
+        'app/libs/countdown/jquery.downCount.js'
     ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())

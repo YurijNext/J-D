@@ -22,12 +22,40 @@
 .story__slider         
     width: 576px
     height: 440px
-    .slider__item
-        width: 576px
-        height: 440px
 
 .story__content
     margin-left: 100px
     width: 55%
     .content__descr 
         max-width: 88%
+
+@media only screen and (max-width: 1080px)
+    .story
+        .flex-wrapper
+            flex-direction: column
+            align-items: center
+        
+    .story__slider
+        margin-bottom: 40px
+    
+    .story__content
+        margin-left: 0
+        width: 70%
+        text-align: center
+        .content__title::after
+            left: 50%
+            transform: translateX(-50%)
+        .content__descr
+            max-width: 100%
+
+@media only screen and (max-width: 780px)
+    .story__slider
+        .slick-arrow
+            left: 50%
+            margin-left: -50px
+        
+        .slick-next
+            left: 62%
+        
+        .slick-prev
+            left: 38%

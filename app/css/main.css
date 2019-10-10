@@ -342,7 +342,60 @@ button {
           transform: translate(-50%, 50%);
   bottom: 0;
   color: #4F3566;
-  display: none; }
+  text-align: center; }
+
+.countdown__title {
+  font-family: "PlayfairDisplay-Bold", sans-serif;
+  font-size: 2em;
+  line-height: 1.3em;
+  color: #4F3566;
+  text-transform: capitalize;
+  margin-top: 0;
+  margin-bottom: 32px; }
+
+.countdown__block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-top: 1px solid #CBBADB;
+  border-bottom: 1px solid #CBBADB; }
+
+.countdown__element {
+  padding: 16px 16px 8px 16px;
+  border-right: 1px solid #CBBADB; }
+  .countdown__element .count, .countdown__element .label {
+    display: block; }
+  .countdown__element .count {
+    font-family: "PlayfairDisplay-Bold", sans-serif;
+    font-size: 2em;
+    line-height: 1.3em;
+    color: #4F3566;
+    text-transform: uppercase; }
+  .countdown__element .label {
+    font-size: 14px;
+    line-height: 20px;
+    color: #4F3566;
+    text-transform: lowercase; }
+
+.countdown__element:first-child {
+  border-left: 1px solid #CBBADB; }
+
+@media only screen and (max-width: 500px) {
+  .countdown__title {
+    font-size: 1.5em; }
+  .countdown .count {
+    font-size: 1.5em; }
+  .countdown__seconds {
+    display: none; } }
 
 .happy {
   padding-top: 205px;
@@ -418,9 +471,6 @@ button {
   padding-right: 167px;
   padding-left: 100px; }
 
-.container {
-  border: 1px solid red; }
-
 @media screen and (max-width: 1350px) {
   .photo__border--left {
     top: 64px;
@@ -476,7 +526,34 @@ button {
   .groom__photo, .bride__photo {
     width: 42.8%; }
   .happy__groom .section-content, .happy__bride .section-content {
-    width: 57%; } }
+    width: 57%;
+    padding-left: 0; }
+  .happy__groom .content__title::after, .happy__bride .content__title::after {
+    left: 0; } }
+
+@media only screen and (max-width: 700px) {
+  .section-title {
+    font-size: 2.75em; }
+  .happy__groom {
+    margin-bottom: 40px; }
+  .happy__groom, .happy__bride {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .happy__groom .groom__photo, .happy__groom .bride__photo, .happy__bride .groom__photo, .happy__bride .bride__photo {
+    display: none; }
+  .happy__groom .section-content, .happy__bride .section-content {
+    width: 100%;
+    text-align: center; }
+    .happy__groom .section-content .content__descr, .happy__bride .section-content .content__descr {
+      max-width: 100%; }
+    .happy__groom .section-content .content__title::after, .happy__bride .section-content .content__title::after {
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+              transform: translateX(-50%); } }
 
 .story {
   position: relative;
@@ -506,9 +583,6 @@ button {
 .story__slider {
   width: 576px;
   height: 440px; }
-  .story__slider .slider__item {
-    width: 576px;
-    height: 440px; }
 
 .story__content {
   margin-left: 100px;
@@ -516,101 +590,74 @@ button {
   .story__content .content__descr {
     max-width: 88%; }
 
+@media only screen and (max-width: 1080px) {
+  .story .flex-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .story__slider {
+    margin-bottom: 40px; }
+  .story__content {
+    margin-left: 0;
+    width: 70%;
+    text-align: center; }
+    .story__content .content__title::after {
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+              transform: translateX(-50%); }
+    .story__content .content__descr {
+      max-width: 100%; } }
+
+@media only screen and (max-width: 780px) {
+  .story__slider .slick-arrow {
+    left: 50%;
+    margin-left: -50px; }
+  .story__slider .slick-next {
+    left: 62%; }
+  .story__slider .slick-prev {
+    left: 38%; } }
+
 .photos {
-  padding: 80px 0; }
+  padding: 120px 0; }
   .photos .section-title {
     margin-bottom: 110px; }
   .photos .slick-arrow {
     left: 50%;
-    margin-left: -50px; }
+    margin-left: -50px;
+    bottom: -66px; }
   .photos .slick-prev {
-    left: 45%; }
+    left: 40%; }
   .photos .slick-next {
-    left: 55%; }
+    left: 60%; }
+  .photos .slider-pagination {
+    color: #4F3566; }
 
-.slick-slider {
-  padding-bottom: 56px;
-  position: relative;
-  display: block;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  -ms-touch-action: pan-y;
-      touch-action: pan-y; }
+.slider-wrapper {
+  position: relative; }
 
-.slick-list {
-  position: relative;
-  display: block;
-  overflow: hidden;
+.slick-center {
   margin: 0;
-  padding: 0; }
-  .slick-list:focus {
-    outline: none; }
-  .slick-list.dragging {
-    cursor: pointer;
-    cursor: hand; }
-
-.slick-slider .slick-track, .slick-slider .slick-list {
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0); }
-
-.slick-track {
-  position: relative;
-  top: 0;
-  left: 0;
-  display: block; }
-  .slick-track:before {
-    display: table;
-    content: ''; }
-  .slick-track:after {
-    display: table;
-    content: '';
-    clear: both; }
-
-.slick-loading .slick-track {
-  visibility: hidden; }
-
-.slick-slide {
-  display: none;
-  float: left;
-  height: 100%;
-  min-height: 1px; }
-
-.slick-slide img {
-  display: block; }
-
-.slick-slide.slick-loading img {
-  display: none; }
-
-.slick-slide.dragging img {
-  pointer-events: none; }
-
-.slick-initialized .slick-slide {
-  display: block; }
-
-.slick-loading .slick-slide {
-  visibility: hidden; }
-
-.slick-vertical .slick-slide {
-  display: block;
-  height: auto; }
-
-.slick-arrow.slick-hidden {
-  display: none; }
-
-.slick-thumbs {
-  display: block;
-  width: 100%; }
-
-img {
-  max-width: 100%;
-  max-height: 100%; }
-
-.slick-big-wrap img {
-  width: 100%; }
+  padding: 0;
+  list-style-type: none; }
+  .slick-center .slick-current {
+    width: 0 0;
+    top: 0;
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: center center;
+        -ms-transform-origin: center center;
+            transform-origin: center center;
+    -webkit-transition: width top transform .3s ease;
+    -o-transition: width top transform .3s ease;
+    transition: width top transform .3s ease; }
 
 .slick-center .slick-slide {
   text-align: center; }
@@ -625,9 +672,9 @@ img {
 .slick-center .slick-current {
   width: 0 30px;
   top: 50%;
-  -webkit-transform: scale(1.3);
-      -ms-transform: scale(1.3);
-          transform: scale(1.3);
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
   -webkit-transform-origin: center center;
       -ms-transform-origin: center center;
           transform-origin: center center;
@@ -637,8 +684,15 @@ img {
   transition: transform .3s ease;
   transition: transform .3s ease, -webkit-transform .3s ease; }
 
-.slider__item {
-  border: none; }
+.slider-pagination {
+  position: absolute;
+  bottom: -74px;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+      -ms-transform: translate(-50%);
+          transform: translate(-50%); }
+  .slider-pagination p {
+    margin: 0; }
 
 .venues {
   padding-bottom: 112px; }
@@ -751,6 +805,58 @@ img {
 .address__map--ceremony, .address__map--reception {
   width: 100%;
   height: 100%; }
+
+@media only screen and (max-width: 1130px) {
+  .address__map-container--left, .address__map-container--right {
+    position: relative; }
+  .address__contacts {
+    width: 100%;
+    margin-bottom: 30px;
+    padding-top: 40px;
+    padding-bottom: 32px;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: relative;
+    text-align: center; }
+    .address__contacts .wrapper {
+      display: inline-block; }
+    .address__contacts .title::after {
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+              transform: translateX(-50%); }
+  .ceremony__address, .reception__address {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+  .ceremony__address {
+    margin-bottom: 80px; }
+  .address__map {
+    width: 100%;
+    top: 0; } }
+
+@media only screen and (max-width: 600px) {
+  .address__contacts .title {
+    font-size: 1.6em; } }
+
+@media only screen and (max-width: 450px) {
+  .contacts__date {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center; }
+    .contacts__date span {
+      margin-bottom: 10px; }
+    .contacts__date .contacts__address {
+      margin-left: 20px; } }
 
 .feedback {
   padding-top: 96px;
@@ -866,6 +972,47 @@ img {
 .feedback .btn {
   float: right; }
 
+@media only screen and (max-width: 1280px) {
+  .feedback::after {
+    display: none; } }
+
+@media only screen and (max-width: 1000px) {
+  .feedback__form {
+    padding-left: 50px; } }
+
+@media only screen and (max-width: 780px) {
+  .feedback:before {
+    width: 30%; }
+  .feedback__form {
+    width: 72%; } }
+
+@media only screen and (max-width: 650px) {
+  .feedback:before {
+    display: none; }
+  .feedback__form {
+    width: 100%;
+    padding-left: 0; } }
+
+@media only screen and (max-width: 400px) {
+  .inputs-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 0; }
+    .inputs-wrapper select {
+      margin-bottom: 20px; }
+    .inputs-wrapper textarea {
+      margin-bottom: 40px; }
+    .inputs-wrapper input {
+      width: 100%;
+      margin-bottom: 20px; }
+      .inputs-wrapper input:last-child {
+        margin-left: 0; }
+  .inputs-wrapper input:last-child, .inputs-wrapper select:last-child {
+    margin-left: 0; } }
+
 .support {
   padding-top: 112px;
   padding-bottom: 185px; }
@@ -977,3 +1124,7 @@ img {
   margin-top: 16px;
   font-size: 20px;
   line-height: 32px; }
+
+@media only screen and (max-width: 700px) {
+  .section-title {
+    font-size: 2.75em; } }

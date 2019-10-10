@@ -85,4 +85,48 @@
     width: 100%
     height: 100%
 
+@media only screen and (max-width: 1130px)
+    .address__map-container--left, .address__map-container--right
+        position: relative
+    
+    .address__contacts
+        width: 100%
+        margin-bottom: 30px
+        padding-top: 40px
+        padding-bottom: 32px
+        padding-left: 20px
+        padding-right: 20px
+        position: relative
+        text-align: center
+        .wrapper
+            display: inline-block
+        
+        .title::after
+            left: 50%
+            transform: translateX(-50%)
+
+    .ceremony__address, .reception__address
+        flex-direction: column
+        align-items: flex-start
+    
+    .ceremony__address
+        margin-bottom: 80px
+    
+    .address__map
+        width: 100%
+        top: 0
+
+@media only screen and (max-width: 600px)
+    .address__contacts .title
+        font-size: 1.6em
+
+@media only screen and (max-width: 450px)
+    .contacts__date
+        flex-direction: column
+        text-align: center
+        span
+            margin-bottom: 10px
+
+        .contacts__address
+            margin-left: 20px
 

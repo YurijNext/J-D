@@ -6,5 +6,55 @@
     transform: translate(-50%, 50%)
     bottom: 0
     color: $accent
-    display: none
+    text-align: center
 
+.countdown__title
+    font-family: $playfairBold
+    font-size: 2em
+    line-height: 1.3em
+    color: $accent
+    text-transform: capitalize
+    margin-top: 0
+    margin-bottom: 32px
+
+
+.countdown
+    &__block 
+        display: flex
+        align-items: center
+        justify-content: center
+        border-top: 1px solid #CBBADB
+        border-bottom: 1px solid #CBBADB
+
+    &__element
+        padding: 16px 16px 8px 16px
+        border-right: 1px solid #CBBADB
+        .count, .label
+            display: block
+        .count
+            font-family: $playfairBold
+            font-size: 2em
+            line-height: 1.3em
+            color: $accent
+            text-transform: uppercase
+        .label
+            font-size: 14px
+            line-height: 20px
+            color: $accent
+            text-transform: lowercase
+    &__element:first-child
+        border-left: 1px solid #CBBADB
+
+@media only screen and (max-width: 500px)
+    .countdown
+        &__title
+            font-size: 1.5em
+        
+        .count 
+            font-size: 1.5em
+        
+        &__seconds 
+            display: none
+        
+        &__minutes
+            

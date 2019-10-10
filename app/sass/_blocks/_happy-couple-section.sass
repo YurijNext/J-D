@@ -57,10 +57,6 @@
     padding-right: 167px
     padding-left: 100px
 
-
-.container 
-    border: 1px solid red
-
 //Media
 @media screen and (max-width: 1350px)
     .photo__border--left
@@ -128,6 +124,33 @@
     .happy__groom, .happy__bride
         .section-content
             width: 57%
+            padding-left: 0
+        
+        .content__title::after
+            left: 0
 
+@media only screen and (max-width: 700px)
+    .section-title
+        font-size: 2.75em
+
+    .happy__groom
+        margin-bottom: 40px
+
+    .happy__groom, .happy__bride
+        flex-direction: column
+    
+    .happy__groom, .happy__bride
+        .groom__photo, .bride__photo
+            display: none
+        .section-content
+            width: 100%
+            text-align: center
+            .content__descr
+                max-width: 100%
+            .content__title::after
+                left: 50%
+                transform: translateX(-50%)
+    
+    
 
 
