@@ -10,7 +10,6 @@
     display: flex
     justify-content: space-between
     align-items: center
-    width: 60%
     height: 100%
     position: absolute
     top: -50%
@@ -27,11 +26,49 @@
     color: $accent
 
 .footer__photo
+    position: absolute
+    left: 53%
+    top: -60px
+    transform: translateX(-50%)
     display: flex
     flex-direction: column
     align-items: center
+    .img-wrapper
+        width: 192px
+        height: 112px
 
 .footer__date
     margin-top: 16px
     font-size: 20px
     line-height: 32px
+
+.footer__groom-name
+    margin-right: 150px
+
+.footer__bride-name
+    margin-left: 150px
+
+
+
+@media only screen and (max-width: 670px)
+    .footer__name
+        font-size: 2.5em
+    
+    .footer__photo 
+        top: -44px
+        .img-wrapper
+            width: 145px
+            height: 90px 
+
+    .footer__date
+        margin-top: 0
+
+    .footer__groom-name
+        margin-right: 90px
+
+    .footer__bride-name
+        margin-left: 90px
+
+@media only screen and (max-width: 400px)
+    .footer__name
+        font-size: 1.6em   

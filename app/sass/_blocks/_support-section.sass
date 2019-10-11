@@ -36,3 +36,19 @@
     .btn 
         display: inline-block
 
+@media only screen and (max-width: 630px)
+    .support .flex-container 
+        flex-direction: column
+        text-align: center
+        justify-content: center
+    
+    .support__title
+        font-size: 2em
+        margin-bottom: 35px
+        &::after
+            left: 50%
+            transform: translateX(-50%)
+    
+    .donate-wrapper
+        text-align: center
+
